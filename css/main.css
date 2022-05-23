@@ -85,6 +85,9 @@ small,
     padding: 1rem 1.5rem;
     background-color: #fff;
     box-shadow: var(--lightShadow);
+     height: 48px;
+        overflow: hidden;
+        transition: var(--transition);
    
 }
 .questions h5{
@@ -121,9 +124,9 @@ small,
 .answer{
    
     color: #829ab0;
-    transition: var(--transition);
-    height: 0;
-    overflow: hidden;
+    
+    border-top: 0.1rem solid #829ab0;
+    
 }
 
 .hide{
@@ -135,14 +138,14 @@ small,
 }
 
 .show{
-    border-top: 0.1rem solid #829ab0;
-    height: 105px;
+    height: 176px;
 }
 
-.answer .show .plus-icon{
+/*Remember. You were having a problem before here. The reason is that you didn't properly understand the meaning of line 145. It means the parent with the class show will have a child with the class plus icon, which will have the following properties.*/
+ .show .plus-icon{
     display: none;
 }
-.answer .show .minus-icon{
+ .show .minus-icon{
     display: inline-block;
 }
 
